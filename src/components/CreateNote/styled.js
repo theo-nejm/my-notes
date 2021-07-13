@@ -28,8 +28,7 @@ export const CreateNoteWrapper = styled.div`
   h2 {
     color: #252739;
     text-shadow: 0 0 15px rgba(36, 37, 4, .25);
-    margin-bottom: 2rem;
-
+    margin: .5rem 0 1.5rem;
   }
 
   form {
@@ -44,6 +43,8 @@ export const CreateNoteWrapper = styled.div`
     padding: .2rem .3rem;
 
     margin-bottom: .75rem;
+
+    border: 1px solid #252739;
   }
 
   #body {
@@ -51,6 +52,8 @@ export const CreateNoteWrapper = styled.div`
     width: 100%;
     padding: .2rem .3rem;
     resize: none;
+
+    border: 1px solid #252739;
   }
 
   .actions {
