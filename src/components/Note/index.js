@@ -7,8 +7,16 @@ export default function Note(props) {
   return (
     <NoteWrapper>
       <div className="note-body">
-        <h3>{props.title}</h3>
-        <p>{props.body}</p>
+        <h3>{
+          props.title.length > 22 ?
+          props.title.slice(0, 19) + '...' :
+          props.title
+        }</h3>
+        <p>{
+          props.body.length > 150 ?
+          props.body.slice(0, 150) + '...' :
+          props.body
+        }</p>
       </div>
 
       <div className="note-actions">
