@@ -20,7 +20,7 @@ export const NoNotesWrapper = styled.div`
 
   .no-notes-content h3 {
     margin-bottom: 1rem;
-
+    color: #252739;
     font-size: 1.2rem;
   }
 `

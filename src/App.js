@@ -17,6 +17,7 @@ class App extends Component {
 
     this.handleSubmit = this.handleSubmit.bind(this)
     this.handleCloseButton = this.handleCloseButton.bind(this)
+    this.deleteNote = this.deleteNote.bind(this)
   }
 
   handleClick() {
@@ -31,9 +32,16 @@ class App extends Component {
     })
   }
 
-  handleSubmit(event) {
+  handleSubmit() {
     const title = document.getElementById('title').value;
     const body = document.getElementById('body').value;
+    if(!title || !body) {
+      this.setState({
+        isAddNote: false,
+      })
+      return;
+    }
+
     const newNote = [title, body]
 
     const newNotes = this.state.notes.slice()
@@ -46,6 +54,18 @@ class App extends Component {
     })
   }
 
+  deleteNote(event) {
+    const index = parseInt(event.target.id)
+    let newNotes = this.state.notes.slice()
+    newNotes.splice(index, 1)
+    const JSONNewNotes = JSON.stringify(newNotes);
+    localStorage.setItem('notes', JSONNewNotes)
+
+    this.setState({
+      notes: newNotes,
+    })
+  }
+
   render () {
     return(
       <div className="App">
@@ -54,7 +74,10 @@ class App extends Component {
         />
         {
           this.state.notes.length > 0 ?
-          <Notes notes={this.state.notes} /> :
+          <Notes
+            notes={this.state.notes}
+            deleteNote={this.deleteNote}
+          /> :
           <NoNotes />
         }
 

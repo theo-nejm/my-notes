@@ -2,7 +2,8 @@ import styled from "styled-components";
 
 export const NotesWrapper = styled.div`
   height: auto;
-  width: 100vw;
+  width: 90vw;
+  margin-left: 5vw;
 
   padding: 1rem 0;
 

@@ -7,7 +7,7 @@ function TitleInput() {
       <input
         type="text"
         id="title"
-        placeholder="Title:"
+        placeholder="Title: [maximum 22 characters]"
         className="title-input"
       />
   )
@@ -18,7 +18,8 @@ function BodyInput() {
     <textarea
       type="text"
       id="body"
-      placeholder="Type your note here:" />
+      placeholder="Type your note here: "
+    />
   )
 }
 

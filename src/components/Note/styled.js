@@ -1,54 +1,65 @@
 import styled from "styled-components";
 
 export const NoteWrapper = styled.div`
-  height: 8rem;
-  width: 12rem;
-
+  height: 12rem;
+  width: 18rem;
   border: 1px solid black;
-
-  padding: .5rem;
-
+  padding: 1rem .5rem;
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
   align-items: center;
-
+  justify-content: space-between;
   background: #f6fAAC;
-
   box-shadow:
     -.15rem .15rem 0 #f5f99B,
     -.25rem .25rem 0 #252739
   ;
-
   transition: cubic-bezier(0.68, -0.55, 0.265, 1.55) .5s;
-
   color: #252739;
 
+  position: relative;
   &:hover {
     box-shadow: none;
     transform: translateX(-.25rem) translateY(.25rem);
   }
 
-  .note-header {
-    width: 100%;
+  .note-actions {
+    width: 3rem;
+    height: 100%;
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
     align-items: center;
-    justify-content: space-between;
-
-    margin-bottom: .4rem;
+    justify-content: space-around;
 
     .delete-icon,
-    .divider {
-      width: 1.5rem;
-    }
-
-    .delete-icon {
-      font-size: 1.3rem;
+    .read-icon,
+    .star-icon {
+      font-size: 1.5rem;
       cursor: pointer;
     }
   }
 
-  h3 {
-    font-size: 1.5rem;
+  .note-body {
+    height: 12rem;
+    width: 15rem;
+    padding: .5rem;
+
+
+    overflow: hidden;
+
+    h3 {
+      font-size: 1.3rem;
+      text-align: center;
+      margin: .5rem 0;
+    }
+
+    p {
+      line-height: 1.1rem;
+      text-align: justify-all;
+    }
+
+
   }
+
+
 `
