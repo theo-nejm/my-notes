@@ -10,7 +10,9 @@ export default createGlobalStyle`
 
   body {
     font-family: --apple-system, 'Roboto', BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif, serif;
-    background: #f3e779;
+    background: #f5f99B;
+
+    overflow-x: hidden;
   }
 
   html, body, #root {
